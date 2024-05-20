@@ -1,0 +1,30 @@
+<br>
+<div>
+    <button class="btn btn-primary" (click)="Add()">Ajouter Provider</button>
+    
+</div>
+<br> 
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Address</th>
+        <th scope="col">Email</th>
+        <th scope="col">Modifier</th>
+        <th scope="col">Supprimer</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let provider of providers">
+        <td> {{provider.id}} </td>
+        <td> {{provider.name}} </td>
+        <td> {{provider.address}} </td>
+        <td>  {{provider.email}} </td>
+        <td>  <button class="btn btn-warning" (click)="Edit(provider)">Modifier</button>  </td>
+        <td>   <button class="btn btn-danger" (click)="Delete(provider)">Supprimer</button> </td>
+      </tr>
+     
+    </tbody>
+  </table>
+   

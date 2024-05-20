@@ -1,0 +1,34 @@
+<h3 align="center">Ajouter article</h3>
+<div style="margin-left: 150px;width:50%">
+
+
+    <form #articleForm="ngForm" (ngSubmit)="addArticle(articleForm.value)" >
+      <div class="form-group">
+        <label for="label">Label</label>
+        <input ngModel required name="label" type="text" class="form-control" id="label" aria-describedby="labelHelp" placeholder="label">
+      </div>
+      <div class="form-group">
+        <label for="price">Price</label>
+        <input ngModel name="price" type="text" class="form-control" id="price" aria-describedby="priceHelp" placeholder="Price">
+      </div>
+      <div class="form-group">
+        <label for="picture">Picture</label>
+        <input ngModel required name="picture" type="text" class="form-control" id="picture" aria-describedby="priceHelp" placeholder="Picture">
+      </div>
+    
+      <div class="form-group">
+        <label for="provider">Provider</label>
+        <select ngModel name="provider" id="provider" class="form-control">
+            <option>
+                Choisir un provider
+            </option>
+            <option  *ngFor="let provider of listproviders"  value="{{provider.id}}">
+                {{provider.name}}
+            </option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Enregistrer</button>
+      </form>
+    </div>
+    

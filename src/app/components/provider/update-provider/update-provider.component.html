@@ -1,0 +1,22 @@
+<h3 align="center">Modifier provider</h3>
+<div style="margin-left: 150px;width:50%">
+
+
+    
+      <div class="form-group">
+        <label for="nom">Name</label>
+        <input [(ngModel)]="name"  required name="name" type="text" class="form-control" id="nom" aria-describedby="emailHelp" placeholder="Nom">
+      </div>
+      <div class="form-group">
+        <label for="address">Address</label>
+        <input [(ngModel)]="address" name="address" type="text" class="form-control" id="address" aria-describedby="emailHelp" placeholder="Adress">
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input [(ngModel)]="email"  required name="email" type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Email">
+      </div>
+    
+      <button type="submit" class="btn btn-primary" (click)="editProvider()">Enregistrer</button>
+      
+    </div>
+    

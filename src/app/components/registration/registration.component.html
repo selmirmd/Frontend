@@ -1,0 +1,30 @@
+ 
+<div class="container col-lg-6">
+    <h1 class="text-center">Sign up</h1>
+    <div class="card">
+        <div class="card-body">
+            <form class="form-group" (ngSubmit)="register()" [formGroup]="userForm">
+                
+                <div class="form-group">
+                    <label > Username :</label>
+                    <input type="text" class="form-control" formControlName="username">
+                    <div *ngIf="userForm.get('username')?.hasError('required')" style="color: red;">Username is required</div>
+                   <div *ngIf="userForm.get('username')?.hasError('minlength')"style="color: red;">Username should be 5 characters min</div>
+
+                </div>
+                   <div class="form-group">
+                    <label  > Password :</label>
+                    <input type="password" class="form-control" formControlName="password">
+                </div>
+
+                <div class="form-group">
+                    <label  > Telephone :</label>
+                    <input type="text" class="form-control" formControlName="telephone">
+                </div>
+                <button type="submit" [disabled]="userForm.invalid" class="btn btn-success">Register</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+

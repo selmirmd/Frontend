@@ -1,0 +1,35 @@
+<br>
+<div>
+    <button   class="btn btn-primary" (click)="Add()">Ajouter Article</button>
+    
+</div>
+<br> 
+<table   class="table table-bordered table-hover text-center" >
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Label</th>
+        <th scope="col">Price</th>
+        <th scope="col">Picture</th>
+        <th scope="col">provider</th>
+        <th scope="col">Adresse provider</th>
+        <th scope="col">Email provider</th>
+        <th scope="col">Modifier</th>
+        <th scope="col">Supprimer</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let article of articles">
+        <td> {{article.id}} </td>
+        <td> {{article.label}} </td>
+        <td> {{article.price}} </td>
+        <td> {{article.picture}} </td>
+        <td>  {{article.provider.name}} </td>
+        <td>  {{article.provider.address}} </td>
+        <td>  {{article.provider.email}} </td>
+        <td>  <button class="btn btn-warning" (click)="Edit(article)">Modifier</button>  </td>
+        <td>   <button class="btn btn-danger" (click)="Delete(article)">Supprimer</button> </td>
+      </tr>
+     
+    </tbody>
+  </table>
